@@ -1,0 +1,18 @@
+<% provide(:title, 'Contact Us') %>
+<div class="jumbotron">
+	<div class="container">
+		<h1>Contact Us</h1> 
+	</div>
+       <div class="row">
+      <div class="span6 offset3">
+         <%= form_tag("blogs/send_email")  do %> 
+         <%= label_tag = :subject %>
+         <%= text_field_tag(:subject) %> 
+         <%= label_tag = :body %>
+         <%= text_area_tag :body %> 
+         <%= submit_tag( "send email", class: "btn btn-large btn-primary" )%> 
+         <% end %>
+      </div>
+	</div>
+</div>
+
