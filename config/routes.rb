@@ -1,4 +1,6 @@
 Temp::Application.routes.draw do
+
+
   # get "users/new"
   post "blogs/send_email"
   post "sessions/create"
@@ -8,6 +10,7 @@ Temp::Application.routes.draw do
   # get "blogs/home"
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :microposts #, only: [:create, :destroy, :edit]
 
  match '/signin', to: 'sessions#new'
  match '/signout', to: 'sessions#destroy', via: :delete
